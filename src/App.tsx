@@ -22,7 +22,7 @@ export default function App() {
       <h1>SAT Study Dashboard</h1>
       <ScoreEntry onSubmit={handleSubmit} />
       <ScoreHistory scores={scores} />
-      <ProgressSummary />
+      <ProgressSummary scores={scores} />
       <WeakAreas />
     </div>
   )
