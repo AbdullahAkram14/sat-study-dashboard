@@ -37,3 +37,21 @@
 - What I changed before approving: I approved the plan because extracting pure helper functions made the logic easier to test.
 - Verification: Ran `npm test` and confirmed the score calculation tests passed.
 - One thing I learned: Pulling logic out of components makes it easier to test important behavior.
+## AI Workflow
+
+For planning, I primarily used ChatGPT and Claude in plan mode. I used chat tools to break larger features into smaller tasks and think through requirements before any code was written. For execution, I used Claude Code because it could read the project files, propose implementation plans, and make changes directly in the repository. For polishing, I used GitHub Copilot inside VS Code for small edits, naming improvements, and quick code suggestions. For review and verification, I switched back to chat tools to evaluate plans, check assumptions, and make sure features met the acceptance criteria.
+
+One example where a tool clearly outperformed another was feature implementation. Claude Code was much better than a chat interface because it had access to the project files and could make coordinated changes across multiple components. A chat tool could explain what to do, but Claude Code could actually execute the plan efficiently.
+
+I also switched tools during development when I realized a chat explanation was not enough for implementation. I used chat to refine requirements and then handed the task to Claude Code for execution. This workflow helped me stay focused on decision-making while allowing the AI tools to handle repetitive coding tasks.
+
+
+## Reflection
+
+The agentic workflow allowed me to build significantly more functionality in a few hours than I could have completed entirely on my own. Instead of spending most of my time searching documentation, writing boilerplate, and debugging small implementation details, I was able to focus on defining requirements, reviewing plans, and verifying results. The workflow helped me build a complete SAT Study Dashboard with score entry, score history, progress tracking, weak-area recommendations, and automated tests in a much shorter amount of time.
+
+There were several moments where I had to override or redirect Claude. One example was during the initial project setup when Claude wanted to introduce additional dependencies and styling tools that were not necessary for the first task. I simplified the scope and kept the implementation focused on the assignment requirements. Another example was when I requested that improvement calculations show a value of 0 rather than a placeholder when only one score existed. These decisions required understanding the user experience and project goals rather than simply accepting the first implementation suggestion.
+
+This project revealed that my biggest responsibility is not writing code but exercising judgment. AI can generate solutions quickly, but it does not automatically know the best tradeoffs for a specific project. I learned that I need to provide clear constraints, review plans carefully, and verify outputs instead of assuming generated code is correct. I also discovered gaps in my own knowledge regarding React state management, testing workflows, and project organization. When Claude proposed changes, I sometimes realized I understood the desired outcome but not necessarily the implementation details. That highlighted areas where I still need to strengthen my technical understanding.
+
+In an internship, I plan to use this workflow by separating planning, implementation, and review into distinct stages. On day one, I would first learn the project structure, documentation, and conventions before asking any AI tool to make changes. Then I would use AI to accelerate implementation while maintaining responsibility for reviewing decisions, testing outcomes, and ensuring the final result aligns with team expectations. The most important lesson from this capstone is that AI works best when guided by clear human judgment rather than treated as an autopilot.
