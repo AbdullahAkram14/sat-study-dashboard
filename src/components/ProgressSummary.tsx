@@ -1,4 +1,5 @@
 import type { ScoreRecord } from '../App'
+import { totalScore, calcImprovement } from '../utils/scoreUtils'
 
 type Props = {
   scores: ScoreRecord[]
@@ -14,10 +15,10 @@ export function ProgressSummary({ scores }: Props) {
     )
   }
 
-  const totals = scores.map(s => s.math + s.readingWriting)
+  const totals = scores.map(totalScore)
   const latest = totals[0]
   const best = Math.max(...totals)
-  const improvement = latest - totals[totals.length - 1]
+  const improvement = calcImprovement(scores)
 
   return (
     <section className="section">

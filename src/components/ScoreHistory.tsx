@@ -1,4 +1,5 @@
 import type { ScoreRecord } from '../App'
+import { totalScore } from '../utils/scoreUtils'
 
 type Props = {
   scores: ScoreRecord[]
@@ -32,7 +33,7 @@ export function ScoreHistory({ scores }: Props) {
               <td>{s.date}</td>
               <td>{s.math}</td>
               <td>{s.readingWriting}</td>
-              <td>{s.math + s.readingWriting}</td>
+              <td>{totalScore(s)}</td>
             </tr>
           ))}
         </tbody>

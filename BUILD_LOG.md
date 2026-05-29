@@ -26,7 +26,14 @@
 ## Task 4 — Weak areas and recommendations
 
 - Brief: Add weak-area selection and show a matching study recommendation.
-- What Claude proposed:
-- What I changed before approving:
-- Verification:
-- One thing I learned:
+- What Claude proposed: Add weakArea state in App, replace the WeakAreas placeholder with a select menu, and show recommendations from a simple map.
+- What I changed before approving: I kept the feature simple and avoided adding backend storage or charts.
+- Verification: Selected different weak areas in the browser and confirmed the selected area and matching recommendation appeared.
+- One thing I learned: A simple state value and map object can create useful personalized feedback without needing a complex system.
+## Task 5 — Score calculation tests
+
+- Brief: Add simple automated tests for total score and improvement calculations.
+- What Claude proposed: Extract score helper functions into `scoreUtils.ts`, add Vitest, and write tests for total score and improvement.
+- What I changed before approving: I approved the plan because extracting pure helper functions made the logic easier to test.
+- Verification: Ran `npm test` and confirmed the score calculation tests passed.
+- One thing I learned: Pulling logic out of components makes it easier to test important behavior.
