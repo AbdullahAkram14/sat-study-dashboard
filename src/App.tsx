@@ -12,6 +12,7 @@ export type ScoreRecord = {
 
 export default function App() {
   const [scores, setScores] = useState<ScoreRecord[]>([])
+  const [weakArea, setWeakArea] = useState('')
 
   function handleSubmit(entry: ScoreRecord) {
     setScores(prev => [entry, ...prev])
@@ -23,7 +24,7 @@ export default function App() {
       <ScoreEntry onSubmit={handleSubmit} />
       <ScoreHistory scores={scores} />
       <ProgressSummary scores={scores} />
-      <WeakAreas />
+      <WeakAreas weakArea={weakArea} onSelect={setWeakArea} />
     </div>
   )
 }

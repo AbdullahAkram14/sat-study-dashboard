@@ -18,7 +18,14 @@
 
 ## Task 3 — Progress summary
 
-- Brief:
+* Brief: Add latest score, best score, and improvement calculations based on submitted SAT score records.
+* What Claude proposed: Compute summary statistics from the scores array and display them in a small stats grid.
+* What I changed before approving: I requested that improvement display 0 instead of a dash when only one score exists.
+* Verification: Added multiple score entries and confirmed latest score, best score, and improvement values updated correctly.
+* One thing I learned: Data ordering matters when calculating statistics such as latest and first scores.
+## Task 4 — Weak areas and recommendations
+
+- Brief: Add weak-area selection and show a matching study recommendation.
 - What Claude proposed:
 - What I changed before approving:
 - Verification:
